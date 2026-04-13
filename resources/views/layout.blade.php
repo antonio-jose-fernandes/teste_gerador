@@ -55,7 +55,9 @@
                     <i class="bi bi-columns-gap"></i> Cadastros
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    
+              
+                      <a class="dropdown-item" href="{{route('cliente.list')}}" >   <i class="bi bi-calendar-check"></i> Entidade teste </a>
+        
                  <a class="dropdown-item" href="{{route('area.list')}}" >   <i class="bi bi-layers-half"></i> Área de atuação</a>
                     <a class="dropdown-item" href="{{route('semestre.list')}}" >   <i class="bi bi-calendar-check"></i> Semestre </a>
                 </div>

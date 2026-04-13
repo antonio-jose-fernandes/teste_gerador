@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/",[\App\Http\Controllers\UsuarioController::class,'preLogin'])->name('login');
 
+Route::get("/cliente/list",[\App\Http\Controllers\ClienteController::class,'list'])->name('cliente.list')->middleware('auth');
+Route::get("/cliente/new",[\App\Http\Controllers\ClienteController::class,'create'])->name('cliente.new')->middleware('auth');
+Route::post("/cliente/search",[\App\Http\Controllers\ClienteController::class,'search'])->name('cliente.search')->middleware('auth');
+Route::post("/cliente/save",[\App\Http\Controllers\ClienteController::class,'store'])->name('cliente.save')->middleware('auth');
+Route::delete("/cliente/delete/{id}",[\App\Http\Controllers\ClienteController::class,'delete'])->name('cliente.delete')->middleware('auth');
+Route::get("/cliente/edit/{id}",[\App\Http\Controllers\ClienteController::class,'edit'])->name('cliente.edit')->middleware('auth');
+
+
+
 //AQUI A TELA DE LOGIN = PARA INICAR PELO WELCOME
 //Route::get("/login",[\App\Http\Controllers\UsuarioController::class,'preLogin'])->name('login');
 //Route::get('/',[\App\Http\Controllers\SemestreController::class,'welcome'] )->name('welcome');
