@@ -21,8 +21,9 @@ Route::get("/cliente/list",[\App\Http\Controllers\ClienteController::class,'list
 Route::get("/cliente/new",[\App\Http\Controllers\ClienteController::class,'create'])->name('cliente.new')->middleware('auth');
 Route::post("/cliente/search",[\App\Http\Controllers\ClienteController::class,'search'])->name('cliente.search')->middleware('auth');
 Route::post("/cliente/save",[\App\Http\Controllers\ClienteController::class,'store'])->name('cliente.save')->middleware('auth');
-Route::delete("/cliente/delete/{id}",[\App\Http\Controllers\ClienteController::class,'delete'])->name('cliente.delete')->middleware('auth');
+Route::delete("/cliente/{id}",[\App\Http\Controllers\ClienteController::class,'delete'])->name('cliente.delete')->middleware('auth');
 Route::get("/cliente/edit/{id}",[\App\Http\Controllers\ClienteController::class,'edit'])->name('cliente.edit')->middleware('auth');
+
 
 
 
